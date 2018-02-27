@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"aaltd/controllers"
+	"aaltd-admin/controllers"
 	"github.com/astaxie/beego"
         "github.com/beego/admin"  //admin 包
 )
