@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "aaltd/routers"
+	_ "aaltd-admin/routers"
 	"github.com/astaxie/beego"
 )
 
