@@ -174,8 +174,8 @@ var URL="/public"
 </style>
 <body class="easyui-layout" style="text-align:left">
 <div region="north" border="false" style="overflow: hidden; width: 100%; height:82px; background:#D9E5FD;">
-    <div style="overflow: hidden; width:200px; padding:2px 0 0 5px;">
-        <h2>BeegoAdmin</h2>
+    <div style="overflow: hidden; width:400px; padding:2px 0 0 5px;">
+        <h2>Assential Accessories LTD</h2>
     </div>
     <ul class="ht_nav">
         {{range .groups}}
@@ -183,7 +183,7 @@ var URL="/public"
         {{end}}
     </ul>
     <div id="header-inner" style="float:right; overflow:hidden; height:80px; width:300px; line-height:25px; text-align:right; padding-right:20px;margin-top:-50px; ">
-        欢迎你！ {{.userinfo.Nickname}} <a href="javascript:void(0);" onclick="modifypassword()"> 修改密码</a>
+        歡迎你！ {{.userinfo.Nickname}} <a href="javascript:void(0);" onclick="modifypassword()"> 修改密碼</a>
         <a href="/public/logout" target="_parent"> 退 出</a>
     </div>
 </div>
@@ -192,23 +192,23 @@ var URL="/public"
         <form id="form1" method="post">
             <table>
                 <tr>
-                    <td>旧密码</td>
-                    <td><input type="password"  name="oldpassword" class="easyui-validatebox"  required="true" validType="password[5,20]" missingMessage="请填写当前使用的密码"/></td>
+                    <td>舊密碼</td>
+                    <td><input type="password"  name="oldpassword" class="easyui-validatebox"  required="true" validType="password[5,20]" missingMessage="請填寫當前使用的密碼"/></td>
                 </tr>
                 <tr>
-                    <td>新密码：</td>
-                    <td><input type="password"  name="newpassword" class="easyui-validatebox" required="true" validType="password[5,20]" missingMessage="请填写需要修改的密码"  /></td>
+                    <td>新密碼：</td>
+                    <td><input type="password"  name="newpassword" class="easyui-validatebox" required="true" validType="password[5,20]" missingMessage="請填寫需要修改的密碼"  /></td>
                 </tr>
                 <tr>
-                    <td>重复密码：</td>
-                    <td><input type="password"  name="repeatpassword"  class="easyui-validatebox" required="true" validType="password[5,20]" missingMessage="请重复填写需要修改的密码" /></td>
+                    <td>重複密碼：</td>
+                    <td><input type="password"  name="repeatpassword"  class="easyui-validatebox" required="true" validType="password[5,20]" missingMessage="請重複填寫需要修改的密碼" /></td>
                 </tr>
             </table>
         </form>
     </div>
 </div>
 </div>
-<div region="west" border="false" split="true" title="菜单"  tools="#toolbar" style="width:200px;padding:5px;">
+<div region="west" border="false" split="true" title="菜單"  tools="#toolbar" style="width:200px;padding:5px;">
     <ul id="tree"></ul>
 </div>
 <div region="center" border="false" >
@@ -216,16 +216,16 @@ var URL="/public"
     </div>
 </div>
 <div id="toolbar">
-    <a href="#" class="icon-undo" title="全部展开"  onclick="undo()"></a>
-    <a href="#" class="icon-redo" title="全部关闭"  onclick="redo()"></a>
+    <a href="#" class="icon-undo" title="全部展開"  onclick="undo()"></a>
+    <a href="#" class="icon-redo" title="全部關閉"  onclick="redo()"></a>
 </div>
 <!--右键菜单-->
 <div id="mm" style="width: 120px;display:none;">
     <div iconCls='icon-reload' type="refresh">刷新</div>
     <div class="menu-sep"></div>
-    <div  type="close">关闭</div>
-    <div type="closeOther">关闭其他</div>
-    <div type="closeAll">关闭所有</div>
+    <div  type="close">關閉</div>
+    <div type="closeOther">關閉其他</div>
+    <div type="closeAll">關閉所有</div>
 </div>
 </body>
 </html>

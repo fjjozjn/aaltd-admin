@@ -3,13 +3,13 @@
 <script type="text/javascript">
 var statuslist = [
     {id:'1',text:'禁用'},
-    {id:'2',text:'启用'}
+    {id:'2',text:'啟用'}
 ];
 var URL="/rbac/group";
 $(function(){
     //用户列表
     $("#datagrid").datagrid({
-        title:'分组列表',
+        title:'分組列表',
         url:URL+'/index',
         method:'POST',
         pagination:true,
@@ -23,11 +23,11 @@ $(function(){
         pageList:[10,20,30,50,100],
         columns:[[
             {field:'Id',title:'ID',width:50},
-            {field:'Name',title:'分组名',width:100,align:'center',editor:'text'},
-            {field:'Title',title:'显示名',width:100,align:'center',editor:'text'},
+            {field:'Name',title:'分組名',width:100,align:'center',editor:'text'},
+            {field:'Title',title:'顯示名',width:100,align:'center',editor:'text'},
 
             {field:'Sort',title:'排序',width:50,align:'center',editor:'numberbox'},
-            {field:'Status',title:'状态',width:50,align:'center',
+            {field:'Status',title:'狀態',width:50,align:'center',
                 formatter:function(value){
                     for(var i=0; i<statuslist.length; i++){
                         if (statuslist[i].id == value) return statuslist[i].text;
@@ -116,14 +116,14 @@ $(function(){
 
 function editrow(){
     if(!$("#datagrid").datagrid("getSelected")){
-        vac.alert("请选择要编辑的行");
+        vac.alert("請選擇要編輯的行");
         return;
     }
     $('#datagrid').datagrid('beginEdit', vac.getindex("datagrid"));
 }
 function saverow(index){
     if(!$("#datagrid").datagrid("getSelected")){
-        vac.alert("请选择要保存的行");
+        vac.alert("請選擇要保存的行");
         return;
     }
     $('#datagrid').datagrid('endEdit', vac.getindex("datagrid"));
@@ -131,7 +131,7 @@ function saverow(index){
 //取消
 function cancelrow(){
     if(! $("#datagrid").datagrid("getSelected")){
-        vac.alert("请选择要取消的行");
+        vac.alert("請選擇要取消的行");
         return;
     }
     $("#datagrid").datagrid("cancelEdit",vac.getindex("datagrid"));
@@ -149,11 +149,11 @@ function addrow(){
 
 //删除
 function delrow(){
-    $.messager.confirm('Confirm','你确定要删除?',function(r){
+    $.messager.confirm('Confirm','你確定要刪除?',function(r){
         if (r){
             var row = $("#datagrid").datagrid("getSelected");
             if(!row){
-                vac.alert("请选择要删除的行");
+                vac.alert("請選擇要刪除的行");
                 return;
             }
             vac.ajax(URL+'/DelGroup', {Id:row.Id}, 'POST', function(r){
@@ -171,19 +171,19 @@ function delrow(){
 <table id="datagrid" toolbar="#tb"></table>
 <div id="tb" style="padding:5px;height:auto">
     <a href="#" icon='icon-add' plain="true" onclick="addrow()" class="easyui-linkbutton" >新增</a>
-    <a href="#" icon='icon-edit' plain="true" onclick="editrow()" class="easyui-linkbutton" >编辑</a>
+    <a href="#" icon='icon-edit' plain="true" onclick="editrow()" class="easyui-linkbutton" >編輯</a>
     <a href="#" icon='icon-save' plain="true" onclick="saverow()" class="easyui-linkbutton" >保存</a>
-    <a href="#" icon='icon-cancel' plain="true" onclick="delrow()" class="easyui-linkbutton" >删除</a>
+    <a href="#" icon='icon-cancel' plain="true" onclick="delrow()" class="easyui-linkbutton" >刪除</a>
     <a href="#" icon='icon-reload' plain="true" onclick="reloadrow()" class="easyui-linkbutton" >刷新</a>
 </div>
 <!--表格内的右键菜单-->
 <div id="mm" class="easyui-menu" style="width:120px;display: none" >
     <div iconCls='icon-add' onclick="addrow()">新增</div>
-    <div iconCls="icon-edit" onclick="editrow()">编辑</div>
+    <div iconCls="icon-edit" onclick="editrow()">編輯</div>
     <div iconCls='icon-save' onclick="saverow()">保存</div>
     <div iconCls='icon-cancel' onclick="cancelrow()">取消</div>
     <div class="menu-sep"></div>
-    <div iconCls='icon-cancel' onclick="delrow()">删除</div>
+    <div iconCls='icon-cancel' onclick="delrow()">刪除</div>
     <div iconCls='icon-reload' onclick="reloadrow()">刷新</div>
     <div class="menu-sep"></div>
     <div>Exit</div>
@@ -192,16 +192,16 @@ function delrow(){
 <div id="mm1" class="easyui-menu" style="width:120px;display: none"  >
     <div icon='icon-add' onclick="addrow()">新增</div>
 </div>
-<div id="dialog" title="添加分组" style="width:400px;height:300px;">
+<div id="dialog" title="添加分組" style="width:400px;height:300px;">
     <div style="padding:20px 20px 40px 80px;" >
         <form id="form1" method="post">
             <table>
                 <tr>
-                    <td>分组名称：</td>
+                    <td>分組名稱：</td>
                     <td><input name="Name" class="easyui-validatebox" required="true"/></td>
                 </tr>
                 <tr>
-                    <td>显示名：</td>
+                    <td>顯示名：</td>
                     <td><input name="Title" class="easyui-validatebox" required="true"  /></td>
                 </tr>
                 <tr>
@@ -209,10 +209,10 @@ function delrow(){
                     <td><input name="Sort" class="easyui-numberbox" required="true"  /></td>
                 </tr>
                 <tr>
-                    <td>状态：</td>
+                    <td>狀態：</td>
                     <td>
                         <select name="Status"  style="width:153px;" class="easyui-combobox " data-options="value:2" editable="false" required="true"  >
-                            <option value="2" >启用</option>
+                            <option value="2" >啟用</option>
                             <option value="1">禁用</option>
                         </select>
                     </td>
