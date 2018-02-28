@@ -3,7 +3,7 @@
     var grouplist=$.parseJSON({{.grouplist | stringsToJson}});
     var products = [
         {productid:'1',name:'禁用'},
-        {productid:'2',name:'启用'}
+        {productid:'2',name:'啟用'}
     ];
     var URL="/rbac/node";
     $(function(){
@@ -13,10 +13,10 @@
             treeField:"Title",
             fitColumns:"true",
             columns:[[
-                {field:'Title',title:'显示名',width:150,editor:'text'},
+                {field:'Title',title:'顯示名',width:150,editor:'text'},
                 {field:'Id',title:'ID',width:50},
-                {field:'Name',title:'应用名',width:100,editor:'text'},
-                {field:'Group__Id',title:'分组',width:80,
+                {field:'Name',title:'應用名',width:100,editor:'text'},
+                {field:'Group__Id',title:'分組',width:80,
                     formatter:function(value){
                         for(var i=0; i<grouplist.length; i++){
                             if (grouplist[i].Id == value) return grouplist[i].Title;
@@ -24,7 +24,7 @@
                         return value;
                     }
                 },
-                {field:'Status',title:'状态',width:50,align:'center',
+                {field:'Status',title:'狀態',width:50,align:'center',
                     formatter:function(value){
                         for(var i=0; i<products.length; i++){
                             if (products[i].productid == value) return products[i].name;
@@ -102,7 +102,7 @@
             data[0].Pid =Row.Id;
             $("#treegrid").treegrid("expand",Row.Id);//展开节点
             if($("#treegrid").treegrid("getLevel",Row.Id) >2){
-                vac.alert("不允许添加");
+                vac.alert("不允許添加");
                 return false;
             }
         }
@@ -118,7 +118,7 @@
     function editrow(){
         var row = $("#treegrid").treegrid("getSelected");
         if(!row){
-            vac.alert("请选择要编辑的行");
+            vac.alert("請選擇要編輯的行");
             return;
         }
         $("#treegrid").treegrid("beginEdit",row.Id);
@@ -127,7 +127,7 @@
     function saverow(){
         var row = $("#treegrid").treegrid("getSelected");
         if(!row){
-            vac.alert("请选择要保存的行");
+            vac.alert("請選擇要保存的行");
             return;
         }
         $("#treegrid").treegrid("endEdit",row.Id);
@@ -136,18 +136,18 @@
     function cancelrow(){
         var row = $("#treegrid").treegrid("getSelected");
         if(!row){
-            vac.alert("请选择要取消的行");
+            vac.alert("請選擇要取消的行");
             return;
         }
         $("#treegrid").treegrid("cancelEdit",row.Id);
     }
     //删除
     function delrow(){
-        $.messager.confirm('Confirm','你确定要删除?',function(r){
+        $.messager.confirm('Confirm','你確定要刪除?',function(r){
             if (r){
                 var row = $("#treegrid").treegrid("getSelected");
                 if(!row){
-                    vac.alert("请选择要删除的行");
+                    vac.alert("請選擇要刪除的行");
                     return;
                 }
                 vac.ajax(URL+'/DelNode', {Id:row.Id}, 'POST', function(r){
@@ -167,20 +167,20 @@
 
 </script>
 <body>
-<table id="treegrid" title="节点管理" class="easyui-treegrid" toolbar="#tb"></table>
+<table id="treegrid" title="節點管理" class="easyui-treegrid" toolbar="#tb"></table>
 <div id="tb" style="padding:5px;height:auto">
     <input id="group"/>
     <a href="#" icon='icon-add' plain="true" onclick="addrow()" class="easyui-linkbutton" >新增</a>
-    <a href="#" icon='icon-edit' plain="true" onclick="editrow()" class="easyui-linkbutton" >编辑</a>
+    <a href="#" icon='icon-edit' plain="true" onclick="editrow()" class="easyui-linkbutton" >編輯</a>
     <a href="#" icon='icon-save' plain="true" onclick="saverow()" class="easyui-linkbutton" >保存</a>
     <a href="#" icon='icon-cancel' plain="true" onclick="cancelrow()" class="easyui-linkbutton" >取消</a>
-    <a href="#" icon='icon-cancel' plain="true" onclick="delrow()" class="easyui-linkbutton" >删除</a>
+    <a href="#" icon='icon-cancel' plain="true" onclick="delrow()" class="easyui-linkbutton" >刪除</a>
     <a href="#" icon='icon-reload' plain="true" onclick="reloadrow()" class="easyui-linkbutton" >刷新</a>
 </div>
 <!--表格内的右键菜单-->
 <div id="mm" class="easyui-menu" style="width:120px;display: none" >
     <div iconCls='icon-add' onclick="addrow()">新增</div>
-    <div iconCls="icon-edit" onclick="editrow()">编辑</div>
+    <div iconCls="icon-edit" onclick="editrow()">編輯</div>
     <div iconCls='icon-save' onclick="saverow()">保存</div>
     <div iconCls='icon-cancel' onclick="cancelrow()">取消</div>
     <div class="menu-sep"></div>

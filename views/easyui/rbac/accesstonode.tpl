@@ -27,8 +27,8 @@ $(function(){
         'singleSelect':false,
         columns:[[
             {field:'Id',title:'ID',hidden:true},
-            {field:'Title',title:'显示名',width:150},
-            {field:'Name',title:'应用名',width:150}
+            {field:'Title',title:'顯示名',width:150},
+            {field:'Name',title:'應用名',width:150}
         ]],
         onLoadSuccess:function(node,data){
             //默认选中已存在的对应关系
@@ -94,8 +94,8 @@ $(function(){
 <table id="treegrid" toolbar="#tbr"></table>
 <div id="tbr" style="padding:5px;height:auto">
     <div style="margin-bottom:5px">
-        分组：<input id="group" name="name" >
-        当前组：<input id="combobox1" name="name" >
+        分組：<input id="group" name="name" >
+        當前組：<input id="combobox1" name="name" >
         <a href="#"  class="easyui-linkbutton" iconCls="icon-save" title="保存" plain="true" onclick="saveaccess()">保存</a>
     </div>
 </div>

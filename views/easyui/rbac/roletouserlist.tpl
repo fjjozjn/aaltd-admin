@@ -23,8 +23,8 @@ $(function(){
         idField:'Id',
         columns:[[
             {field:'Id',title:'ID',width:50,align:'center'},
-            {field:'Username',title:'用户名',width:140,align:'center'},
-            {field:'Nickname',title:'昵称',width:140,align:'center'}
+            {field:'Username',title:'用戶名',width:140,align:'center'},
+            {field:'Nickname',title:'暱稱',width:140,align:'center'}
         ]],
         onLoadSuccess:function(data){
             $("#datagrid2").datagrid('unselectAll');
@@ -49,7 +49,7 @@ $(function(){
     function saveselect(){
         var rows = $("#datagrid2").datagrid('getSelections');
         if(rows == null){
-            vac.alert("最少要选中一行");
+            vac.alert("最少要選中一行");
         }
         var ids = [];
         for(var i=0; i<rows.length; i++){
@@ -65,11 +65,11 @@ $(function(){
 <table id="datagrid2" toolbar="#tb2"></table>
 <div id="tb2" style="padding:5px;height:auto">
     <div style="margin-bottom:5px">
-        当前组：<input id="combobox" name="name" >
+        當前組：<input id="combobox" name="name" >
         <a href="#"  class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="saveselect()">保存</a>
     </div>
     <div style="margin-bottom:5px">
-        <a href="#"  class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="selectall()">全选</a>
+        <a href="#"  class="easyui-linkbutton" iconCls="icon-ok" plain="true" onclick="selectall()">全選</a>
         <a href="#"  class="easyui-linkbutton" iconCls="icon-no" plain="true" onclick="unselectall()">全否</a>
     </div>
 </div>
