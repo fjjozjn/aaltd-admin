@@ -1,9 +1,9 @@
 package routers
 
 import (
-	"aaltd-admin/controllers"
+	"fjjozjn/aaltd-admin/controllers"
 	"github.com/astaxie/beego"
-        "github.com/beego/admin"  //admin 包
+    "fjjozjn/admin"  //admin 包
 )
 
 func init() {
