@@ -97,10 +97,10 @@ var URL="/public"
         var tab = $("#tabs").tabs("getTab", title);
         $("#tabs").tabs("update", {tab: tab, options: tab.panel("options")});
     }
-    function expand(){
+    function undo(){
         $('#tree').tree('expandAll');
     }
-    function collapse(){
+    function redo(){
         $('#tree').tree('collapseAll');
     }
     function modifypassword(){
@@ -177,11 +177,11 @@ var URL="/public"
     <div style="overflow: hidden; width:400px; padding:2px 0 0 5px;">
         <h2>Assential Accessories LTD</h2>
     </div>
-    <!--ul class="ht_nav">
+    <ul class="ht_nav">
         {{range .groups}}
             <li><span><a class="current"  href="#" onClick="selectgroup({{.Id}});$('.ht_nav li a').removeClass('current');$(this).addClass('current')">{{.Title}}</a></span></li>
         {{end}}
-    </ul-->
+    </ul>
     <div id="header-inner" style="float:right; overflow:hidden; height:80px; width:300px; line-height:25px; text-align:right; padding-right:20px;margin-top:-50px; ">
         歡迎你！ {{.userinfo.Nickname}} <a href="javascript:void(0);" onclick="modifypassword()"> 修改密碼</a>
         <a href="/public/logout" target="_parent"> 退 出</a>
@@ -216,8 +216,8 @@ var URL="/public"
     </div>
 </div>
 <div id="toolbar">
-    <a href="#" class="icon-expand" title="全部展開"  onclick="expand()"></a>
-    <a href="#" class="icon-collapse" title="全部關閉"  onclick="collapse()"></a>
+    <a href="#" class="icon-undo" title="全部展開"  onclick="undo()"></a>
+    <a href="#" class="icon-redo" title="全部關閉"  onclick="redo()"></a>
 </div>
 <!--右键菜单-->
 <div id="mm" style="width: 120px;display:none;">

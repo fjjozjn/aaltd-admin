@@ -5,7 +5,6 @@
   overflow: hidden;
 }
 .calendar table {
-  table-layout: fixed;
   border-collapse: separate;
   font-size: 12px;
   width: 100%;
@@ -89,11 +88,6 @@
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
-.calendar-disabled {
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  cursor: default;
-}
 .calendar-menu {
   position: absolute;
   top: 0;
@@ -110,19 +104,14 @@
   padding-bottom: 5px;
 }
 .calendar-menu-year {
-  width: 50px;
+  width: 40px;
   text-align: center;
   border-width: 1px;
   border-style: solid;
-  outline-style: none;
-  resize: none;
   margin: 0;
   padding: 2px;
   font-weight: bold;
   font-size: 12px;
-  -moz-border-radius: 5px 5px 5px 5px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
 }
 .calendar-menu-prev,
 .calendar-menu-next {
@@ -182,7 +171,6 @@
 }
 .calendar-body th {
   background: #555;
-  padding: 2px 0;
 }
 .calendar-hover,
 .calendar-nav-hover,
