@@ -43,6 +43,12 @@
 .icon-redo{
 	background:url('icons/redo.png') no-repeat center center;
 }
+.icon-expand{
+	background:url('icons/expand.png') no-repeat center center; background-size: 16px, 16px;
+}
+.icon-collapse{
+	background:url('icons/collapse.png') no-repeat center center; background-size: 16px, 16px;
+}
 .icon-back{
 	background:url('icons/back.png') no-repeat center center;
 }
