@@ -10,6 +10,8 @@ import (
 
 	"github.com/astaxie/beego"
 	. "github.com/smartystreets/goconvey/convey"
+	"fmt"
+	"time"
 )
 
 func init() {
@@ -37,3 +39,6 @@ func TestBeego(t *testing.T) {
 	})
 }
 
+func TestTime(t *testing.T) {
+	fmt.Println(time.Now())
+}
