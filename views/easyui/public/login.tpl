@@ -46,19 +46,22 @@ var SubmitOrHidden = function(evt){
 window.document.onkeydown=SubmitOrHidden;//当有键按下时执行函数
 </script>
 <body>
-<div style="text-align:center;margin:0 auto;width:350px;height:250px;" id="dialog" title="登入">
-<div style="padding:20px 20px 20px 40px;" >
-<form id="form" method="post">
-<table >
-    <tr>
-        <td>用戶名：</td><td><input type="text" class="easyui-validatebox" required="true" name="username" missingMessage="請輸入用戶名"/></td>
-    </tr>
-    <tr>
-        <td>密碼：</td><td><input type="password" class="easyui-validatebox" required="true" name="password" missingMessage="請輸入密碼"/></td>
-    </tr>
-</table>
-</form>
-</div>
+<div align="center">
+    <img src="/static/images/assential_logo_small.jpg" />
+    <div style="text-align:center;margin:0 auto;width:350px;height:250px;" id="dialog" title="登入">
+        <div style="padding:20px 20px 20px 40px;" >
+            <form id="form" method="post">
+                <table >
+                    <tr>
+                        <td>用戶名：</td><td><input type="text" class="easyui-validatebox" required="true" name="username" missingMessage="請輸入用戶名"/></td>
+                    </tr>
+                    <tr>
+                        <td>密碼：</td><td><input type="password" class="easyui-validatebox" required="true" name="password" missingMessage="請輸入密碼"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>
