@@ -9,4 +9,5 @@ import (
 func init() {
     admin.Run()
     beego.Router("/", &controllers.MainController{})
+    beego.Router("/sales/product/index", &controllers.MainController{}, "*:ProductIndex")
 }

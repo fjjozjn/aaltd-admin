@@ -13,3 +13,7 @@ func (c *MainController) Get() {
 	c.Data["Email"] = ""
 	c.TplName = "index.tpl"
 }
+
+func (c *MainController) ProductIndex() {
+	c.TplName = "easyui/sales/product/index.tpl"
+}
