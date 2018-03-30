@@ -15,5 +15,6 @@ func (c *MainController) Get() {
 }
 
 func (c *MainController) ProductIndex() {
+	c.Data["SysUrl"] = beego.AppConfig.String("invoice_system_url")
 	c.TplName = "easyui/sales/product/index.tpl"
 }
