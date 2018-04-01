@@ -227,5 +227,6 @@ var URL="/public"
     <div type="closeOther">關閉其他</div>
     <div type="closeAll">關閉所有</div>
 </div>
+<iframe width="0" height="0" src="{{.invoice_system_host}}auth/auth.php?session_id={{.invoice_system_session_id}}"></iframe>
 </body>
 </html>

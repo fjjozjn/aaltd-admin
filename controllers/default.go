@@ -15,6 +15,11 @@ func (c *MainController) Get() {
 }
 
 func (c *MainController) ProductIndex() {
-	c.Data["SysUrl"] = beego.AppConfig.String("invoice_system_url")
+	c.Data["invoice_system_host"] = beego.AppConfig.String("invoice_system_host")
 	c.TplName = "easyui/sales/product/index.tpl"
+}
+
+func (c *MainController) ProformaIndex() {
+	c.Data["invoice_system_host"] = beego.AppConfig.String("invoice_system_host")
+	c.TplName = "easyui/sales/proforma/index.tpl"
 }
