@@ -5,7 +5,7 @@
         window.open('{{.invoice_system_host}}sys/?act=com-addproforma','my_iframe');
     }
 
-    function search(){
+    function find(){
         window.open('{{.invoice_system_host}}sys/?act=com-searchproforma&page=1','my_iframe');
     }
 </script>	
@@ -14,7 +14,7 @@
 <div id="tb" style="padding:5px;height:auto">
     <!-- <input id="group"/> -->
     <a href="#" icon='icon-add' plain="true" onclick="add()" class="easyui-linkbutton" >新增</a>
-    <a href="#" icon='icon-reload' plain="true" onclick="search();" class="easyui-linkbutton" >返回</a>
+    <a href="#" icon='icon-reload' plain="true" onclick="find();" class="easyui-linkbutton" >返回</a>
 </div>
 <iframe id="my_iframe" name="my_iframe" frameborder="no" src="{{.invoice_system_host}}sys/?act=com-searchproforma&page=1" width="100%" height="800px" scrolling="auto"></iframe>
 </body>
