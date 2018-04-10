@@ -1,6 +1,5 @@
 {{template "../../public/header.tpl"}}
 <script type="text/javascript">
-	//打开新增product页面
     function add(){
         window.open('{{.invoice_system_host}}sys/?act=com-addproforma','my_iframe');
     }
@@ -10,7 +9,7 @@
     }
 </script>	
 <body>
-<table id="treegrid" title="PROFORMA" class="easyui-treegrid" toolbar="#tb"></table>
+<table id="treegrid" class="easyui-treegrid" toolbar="#tb"></table>
 <div id="tb" style="padding:5px;height:auto">
     <!-- <input id="group"/> -->
     <a href="#" icon='icon-add' plain="true" onclick="add()" class="easyui-linkbutton" >新增</a>

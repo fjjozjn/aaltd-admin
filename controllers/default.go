@@ -23,3 +23,8 @@ func (c *MainController) ProformaIndex() {
 	c.Data["invoice_system_host"] = beego.AppConfig.String("invoice_system_host")
 	c.TplName = "easyui/sales/proforma/index.tpl"
 }
+
+func (c *MainController) InvoiceIndex() {
+	c.Data["invoice_system_host"] = beego.AppConfig.String("invoice_system_host")
+	c.TplName = "easyui/sales/invoice/index.tpl"
+}
