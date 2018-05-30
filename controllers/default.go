@@ -33,3 +33,8 @@ func (c *MainController) CustomerIndex() {
 	c.Data["invoice_system_host"] = beego.AppConfig.String("invoice_system_host")
 	c.TplName = "easyui/sales/customer/index.tpl"
 }
+
+func (c *MainController) PurchaseIndex() {
+	c.Data["invoice_system_host"] = beego.AppConfig.String("invoice_system_host")
+	c.TplName = "easyui/purchasing/purchase/index.tpl"
+}
