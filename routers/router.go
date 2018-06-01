@@ -14,4 +14,5 @@ func init() {
     beego.Router("/sales/invoice/index", &controllers.MainController{}, "*:InvoiceIndex")
     beego.Router("/sales/customer/index", &controllers.MainController{}, "*:CustomerIndex")
     beego.Router("/purchasing/purchase/index", &controllers.MainController{}, "*:PurchaseIndex")
+    beego.Router("/purchasing/supplier/index", &controllers.MainController{}, "*:SupplierIndex")
 }
