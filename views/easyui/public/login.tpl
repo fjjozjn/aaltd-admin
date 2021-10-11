@@ -47,7 +47,7 @@ window.document.onkeydown=SubmitOrHidden;//当有键按下时执行函数
 </script>
 <body>
 <div align="center">
-    <img src="/static/images/assential_logo_small.jpg" />
+    <img src="/static/images/logo.png" />
     <div style="text-align:center;margin:0 auto;width:350px;height:250px;" id="dialog" title="登入">
         <div style="padding:20px 20px 20px 40px;" >
             <form id="form" method="post">

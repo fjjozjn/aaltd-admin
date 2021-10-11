@@ -175,7 +175,7 @@ var URL="/public"
 <body class="easyui-layout" style="text-align:left">
 <div region="north" border="false" style="overflow: hidden; width: 100%; height:82px; background:#D9E5FD;">
     <div style="overflow: hidden; width:400px; padding:2px 0 0 5px;">
-        <h2>Assential Accessories LTD</h2>
+        <h2>Sparkling Bright Ltd.</h2>
     </div>
     <!-- ul class="ht_nav">
         {{range .groups}}
